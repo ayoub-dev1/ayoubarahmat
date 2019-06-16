@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+	<title>Coming Soon 1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	
+	<div class="size1 bg0 where1-parent">
+		<!-- Coutdown -->
+		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('{% static' images/bg01.jpg');">
+			<div class="wsize2 flex-w flex-c-m cd100 js-tilt">
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 days" id="days">35</span>
+					<span class="s2-txt4">Days</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 hours" id="hours">17</span>
+					<span class="s2-txt4">Hours</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 minutes" id="minutes">50</span>
+					<span class="s2-txt4">Minutes</span>
+				</div>
+
+				<div class="flex-col-c-m size6 bor2 m-l-10 m-r-10 m-t-15">
+					<span class="l2-txt1 p-b-9 seconds" id="seconds">39</span>
+					<span class="s2-txt4">Seconds</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Form -->
+		<div class="size3 flex-col-sb flex-w p-l-75 p-r-75 p-t-45 p-b-45 respon1">
+			<div class="wrap-pic1">
+				<img src="{% static 'images/logo.png' %}" alt="LOGO">
+			</div>
+
+			<div class="p-t-50 p-b-60">
+				<p class="m1-txt1 p-b-36">
+					my website is <span class="m1-txt2">Coming Soon</span>, is under construction.
+
+				</p>
+
+				
+			</div>
+
+			<div class="flex-w">
+				<a href="{{facebook}}" class="flex-c-m size5 bg3 how1 trans-04 m-r-5">
+					<i class="fa fa-facebook"></i>
+				</a>
+
+				<a href="{{twitter}}" class="flex-c-m size5 bg4 how1 trans-04 m-r-5">
+					<i class="fa fa-twitter" style=""></i>
+				</a>
+
+				<a href="{{instagram}}" class="flex-c-m size5 bg7 how1 trans-04 m-r-5" >
+					<i class="fa fa-instagram"></i>
+				</a>
+
+				<a href="{{linkedin}}" class="flex-c-m size5 bg6 how1 trans-04 m-r-5" >
+					<i class="fa fa-linkedin"></i>
+				</a>
+				
+
+			</div>
+		</div>
+	</div>
+
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/countdowntime/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/moment-timezone.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/moment-timezone-with-data.min.js' %}"></script>
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+	<script>
+		var endDate = new Date("Dec 15, 2019 12:00:00").getTime();
+		let now = new Date().getTime(); 
+		let t = endDate - now; 
+
+		
+ 
+		$('.cd100').countdown100({
+			/*Set Endtime here*/
+			/*Endtime must be > current time*/
+			/*endtimeYear: Math.floor(t / (1000 * 60 * 60 * 24)),
+			endtimeMonth: Math.floor(t / (1000 * 60 * 60)),
+			endtimeDate: Math.floor(t / (1000 * 60 * 60 * 24)),
+			endtimeHours: Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+			endtimeMinutes: Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)),
+			endtimeSeconds: Math.floor((t % (1000 * 60)) / 1000),
+			timeZone: "" */
+			// ex:  timeZone: "America/New_York"
+			//go to " http://momentjs.com/timezone/ " to get timezone
+		});
+		
+	</script>
+
+	<script type="text/javascript">
+		var endDate = new Date("July 16, 2019 12:00:00").getTime();
+        var timer = setInterval(function() {
+	    let now = new Date().getTime();
+	    let t = endDate - now;
+    
+    if (t >= 0) {
+    
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let secs = Math.floor((t % (1000 * 60)) / 1000);
+    
+        document.getElementById("days").textContent = days ;
+    
+        document.getElementById("hours").textContent = ("0"+hours).slice(-2) ;
+    
+        document.getElementById("minutes").textContent = ("0"+mins).slice(-2);
+    
+        document.getElementById("seconds").textContent = ("0"+secs).slice(-2);
+    
+    } else {
+
+        document.getElementById("timer").innerHTML = "The countdown is over!";
+    
+    }
+    
+}, 1000)
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/tilt/tilt.jquery.min.js' %}"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
